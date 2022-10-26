@@ -1,4 +1,4 @@
-package com.nuix.data.file.image.gif;
+package com.github.nuix.extendedimageio;
 
 import com.sun.imageio.plugins.common.ReaderUtil;
 import com.sun.imageio.plugins.gif.GIFImageMetadata;

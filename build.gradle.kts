@@ -17,27 +17,11 @@ tasks.withType<KotlinCompile>().configureEach {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.adamchenatnuix"
+            groupId = "com.github.nuix"
             artifactId = "extendedimageio"
             version = "1.0.0"
 
             from(components["java"])
         }
-//
-//        repositories {
-//            maven {
-//                name = "myRepo"
-//                url = uri(layout.buildDirectory.dir("repo"))
-//            }
-//        }
     }
 }
-
-//tasks.withType<JavaCompile>() {
-//    options.compilerArgs.addAll(
-//        arrayOf(
-//            "--add-exports", "java.desktop/com.sun.imageio.plugins.gif=ALL-UNNAMED",
-//            "--add-exports", "java.desktop/com.sun.imageio.plugins.common=ALL-UNNAMED"
-//        )
-//    )
-//}
