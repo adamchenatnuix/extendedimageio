@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    `maven-publish`
 }
 
 repositories {
@@ -14,7 +14,14 @@ tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions.jvmTarget = "11"
 }
 
-version = "1.0.0"
+publishing {
+    publications.registering(MavenPublication::class) {
+        from(project.components["java"])
+        group = "com.github.adamchenatnuix"
+        artifact("extendedimageio")
+        version = "1.0.0"
+    }
+}
 
 tasks.withType<JavaCompile>() {
     options.compilerArgs.addAll(

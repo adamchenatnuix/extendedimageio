@@ -1,10 +1,12 @@
 buildscript {
     repositories {
-        mavenCentral()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
     }
 
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+        classpath("org.gradle.kotlin:gradle-kotlin-dsl-plugins:3.1.0")
     }
 }
 
